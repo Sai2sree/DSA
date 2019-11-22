@@ -1,0 +1,10 @@
+Task0: The run time is O(1). The code takes the same amount of time to get an element from an array/nested arrays using index/indices, regardless of what the input is.
+
+Task1: The run time is O(n). The code loops through the elements of texts/calls list. The time the code takes grow linearly with the length of texts/calls list.
+
+Task2: The run time is O(n*n). The code loops through the nested for-loops in get_call_details() function, so the run time is O(n*n). In other functions, the the code runs through a for-loop resulting in run time of O(n). So, overall run time is O(n*n).
+
+Task3: The run time is O(n). The code loops through the elements of arrays. The time the code takes grow linearly with the length of those arrays. 
+
+Task4: The run time is O(n). The code loops through the elements of calls list. The time the code takes grow linearly with the length of calls list.
+
