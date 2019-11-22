@@ -4,13 +4,32 @@ It's ok if you don't understand how to read files.
 """
 import csv
 
-with open('texts.csv', 'r') as f:
-    reader = csv.reader(f)
-    texts = list(reader)
-
 with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
+    telephone_numbers = []
+    for i in calls:
+        if i[0].startswith('(080)'):
+            telephone_numbers.append(i[1])
+    #telephone_numbers = set(telephone_numbers)
+    area_codes = []
+    bglr_nums = 0
+    for i in telephone_numbers:
+        if i.startswith('(0'):
+            area_code = i.split(')')[0][1:]
+            area_codes.append(area_code)
+            if area_code == '080':
+                bglr_nums += 1
+        else:
+            area_codes.append(i[:4])
+print("The numbers called by people in Bangalore have codes:")
+unique_area_codes = list(set(area_codes))
+unique_area_codes.sort()
+for i in unique_area_codes:
+    print(i)
+
+print(str(round(bglr_nums/len(area_codes)*100, 2)) +
+      " percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")
 
 """
 TASK 3:
