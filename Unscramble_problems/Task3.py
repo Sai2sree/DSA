@@ -28,8 +28,8 @@ unique_area_codes.sort()
 for i in unique_area_codes:
     print(i)
 
-print(str(round(bglr_nums/len(area_codes)*100, 2)) +
-      " percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")
+print("{} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(
+    str(round(bglr_nums/len(area_codes)*100, 2))))
 
 """
 TASK 3:
