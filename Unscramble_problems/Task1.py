@@ -10,6 +10,7 @@ def getTelephoneNumbers(data, index, telephone_numbers):
         telephone_numbers.append(i[index])
     return telephone_numbers
 
+
 with open('texts.csv', 'r') as f:
     reader = csv.reader(f)
     texts = list(reader)
@@ -23,9 +24,7 @@ with open('calls.csv', 'r') as f:
     getTelephoneNumbers(calls, 0, telephone_numbers)
     getTelephoneNumbers(calls, 1, telephone_numbers)
 
-print("There are " + str(len(set(telephone_numbers))) +
-      " different telephone numbers in the records.")
-
+print("There are {} different telephone numbers in the records.".format(str(len(set(telephone_numbers)))))
 """
 TASK 1:
 How many different telephone numbers are there in the records? 
