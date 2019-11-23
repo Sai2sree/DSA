@@ -4,7 +4,7 @@ Task1: The run time is O(n). The code loops through the elements of texts/calls 
 
 Task2: The run time is O(n*n). The code loops through the nested for-loops in get_call_details() function, so the run time is O(n*n). In other functions, the the code runs through a for-loop resulting in run time of O(n). So, overall run time is O(n*n).
 
-Task3: The run time is O(n). The code loops through the elements of arrays. The time the code takes grow linearly with the length of those arrays. 
+Task3: The run time is O(nlogn). The code uses a sort(), a built-in function which has run time of O(nlogn). Other for-loops have a run time of O(n). So, overall run time is O(nlogn).
 
-Task4: The run time is O(n). The code loops through the elements of calls list. The time the code takes grow linearly with the length of calls list.
+Task4: The run time is O(nlogn). The code uses a sort(), a built-in function which has run time of O(nlogn). Other for-loops have a run time of O(n). So, overall run time is O(nlogn).
 
